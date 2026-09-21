@@ -32,7 +32,14 @@ public class App {
         System.out.println("Nome: " + nome);
         System.out.println("Blocos: " + blocos);
         System.out.println("Unidades: " + unidades);
-        System.out.println("Taxa padrão: " + taxa);
+        System.out.print("Taxa padrão: " + taxa);
+        if  (taxa <= 400)   {
+            System.out.print(" - Taxa Econômica\n");
+        } else if (taxa > 400 && taxa <= 700) {
+            System.out.print(" - Taxa intermediária\n");
+        } else {
+            System.out.print(" - Taxa Elevada\n");
+        }
         System.out.println("Portaria 24H: " + portaria);
 
         scanner.close();

@@ -9,6 +9,17 @@ public class App {
     static double taxa;
     static boolean portaria;
 
+    static public void Simular(int unidades, double taxa) {
+        double total = 0;
+        int num = 1;
+        for (int i = 0; i < unidades; i++) {
+            System.out.println("Unidade " + num + " - Taxa: " + taxa);
+            total += taxa;
+            num ++;
+        }
+        System.out.printf("Total: %.2f%n", total);
+    }
+
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
 
@@ -27,8 +38,6 @@ public class App {
             portaria = false;
         }
 
-
-
         System.out.println("Nome: " + nome);
         System.out.println("Blocos: " + blocos);
         System.out.println("Unidades: " + unidades);
@@ -40,7 +49,9 @@ public class App {
         } else {
             System.out.print(" - Taxa Elevada\n");
         }
-        System.out.println("Portaria 24H: " + portaria);
+        System.out.println("Portaria 24H: " + portaria + "\n\n\n");
+
+        Simular(unidades, taxa);
 
         scanner.close();
     }

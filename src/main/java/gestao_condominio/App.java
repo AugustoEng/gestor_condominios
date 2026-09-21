@@ -22,36 +22,52 @@ public class App {
 
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
+        int decisao = 14;
 
-        System.out.print("Insira o Nome: ");
-        nome = scanner.nextLine();
-        System.out.print("Insira os Blocos: ");
-        blocos = scanner.nextInt();
-        System.out.print("Insira as Unidades: ");
-        unidades = scanner.nextInt();
-        System.out.print("Insira a Taxa: ");
-        taxa = scanner.nextDouble();
-        System.out.print("Portaria 24H?\n[1] Sim\n[2] Não\n");
-        if  (scanner.nextInt() == 1)    {
-            portaria = true;
-        } else  {
-            portaria = false;
+        while(decisao != 0) {
+            System.out.print("[1] Dados do Condomínio\n[2] Simular Arrecadação\n[0] Sair\n");
+            decisao = scanner.nextInt();
+            scanner.nextLine();
+            if (decisao == 1){
+                System.out.print("Insira o Nome: ");
+                nome = scanner.nextLine();
+                System.out.print("Insira os Blocos: ");
+                blocos = scanner.nextInt();
+                System.out.print("Insira as Unidades: ");
+                unidades = scanner.nextInt();
+                System.out.print("Insira a Taxa: ");
+                taxa = scanner.nextDouble();
+                System.out.print("Portaria 24H?\n[1] Sim\n[2] Não\n");
+                if  (scanner.nextInt() == 1)    {
+                    portaria = true;
+                } else  {
+                    portaria = false;
+                }
+
+                System.out.println("Nome: " + nome);
+                System.out.println("Blocos: " + blocos);
+                System.out.println("Unidades: " + unidades);
+                System.out.print("Taxa padrão: " + taxa);
+                if  (taxa <= 400)   {
+                    System.out.print(" - Taxa Econômica\n");
+                } else if (taxa > 400 && taxa <= 700) {
+                    System.out.print(" - Taxa intermediária\n");
+                } else {
+                    System.out.print(" - Taxa Elevada\n");
+                }
+                System.out.println("Portaria 24H: " + portaria + "\n\n\n");
+            } else if (decisao == 2) {
+                Simular(unidades, taxa);
+            } else if ( decisao == 0) {
+                break;
+            } else {
+                System.out.println("\n\n");
+            }
         }
 
-        System.out.println("Nome: " + nome);
-        System.out.println("Blocos: " + blocos);
-        System.out.println("Unidades: " + unidades);
-        System.out.print("Taxa padrão: " + taxa);
-        if  (taxa <= 400)   {
-            System.out.print(" - Taxa Econômica\n");
-        } else if (taxa > 400 && taxa <= 700) {
-            System.out.print(" - Taxa intermediária\n");
-        } else {
-            System.out.print(" - Taxa Elevada\n");
-        }
-        System.out.println("Portaria 24H: " + portaria + "\n\n\n");
 
-        Simular(unidades, taxa);
+
+
 
         scanner.close();
     }

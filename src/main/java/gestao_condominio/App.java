@@ -23,10 +23,12 @@ public class App {
 
     Condominio VentoAzul = new Condominio("Vento Azul", 0);
 
-    double valor = Unidade101.CalcularTaxa();
-    VentoAzul.ReceberPagamento(valor);
-    System.out.print("Condomínio " + VentoAzul.getNome() + "\nValor Pago: " + valor + "\nSaldo do Condomínio: " + VentoAzul.getSaldoCaixa());
+//    double valor = Unidade101.CalcularTaxa();
+//    VentoAzul.ReceberPagamento(valor);
+//    System.out.print("Condomínio " + VentoAzul.getNome() + "\nValor Pago: " + valor + "\nSaldo do Condomínio: " + VentoAzul.getSaldoCaixa());
 
+        double total = Unidade101.CalcularTaxa(10);
+        System.out.printf("Taxa com multa %.2f%n", total);
     }
 }
 

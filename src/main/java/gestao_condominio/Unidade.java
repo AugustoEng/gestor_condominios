@@ -35,6 +35,10 @@ public class Unidade {
         return this.taxaBase;
     }
 
+    public double CalcularTaxa(double percentualMulta)  {
+        return CalcularTaxa() + (CalcularTaxa() * (percentualMulta / 100));
+    }
+
     public boolean ExibirSituacao()   {
         return this.ocupado;
     }

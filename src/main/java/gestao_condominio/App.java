@@ -32,7 +32,8 @@ public class App {
 
         Cobertura Miami = new Cobertura(301, 200, true);
 
-        Miami.getAll();
+        double taxa = Miami.CalcularTaxa();
+        System.out.printf("\nTaxa: %.2f%n\n", taxa);
 
     }
 }

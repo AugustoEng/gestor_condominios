@@ -13,10 +13,19 @@ public class Condominio {
         }
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public double getSaldoCaixa()   {
+        return saldoCaixa;
+    }
+
     public void ReceberPagamento(double valor)  {
         if(valor <= 0)   {
             System.out.print("\nPagamentos devem ser maiores que Zero\n");
         } else {
+            saldoCaixa += valor;
             System.out.print("\nPagamento Bem sucesido\n");
         }
     }

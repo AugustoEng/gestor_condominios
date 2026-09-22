@@ -27,16 +27,11 @@ public class Unidade {
         return ocupado;
     }
 
-    public void CalcularTaxa() {
-        System.out.print("Taxa:" + this.taxaBase + "\n");
+    public double CalcularTaxa() {
+        return this.taxaBase;
     }
 
-    void ExibirSituacao()   {
-        System.out.print("Situacao: ");
-        if(this.ocupado)    {
-            System.out.print("Ocupado\n");
-        } else  {
-            System.out.print("Livre\n");
-        }
+    public boolean ExibirSituacao()   {
+        return this.ocupado;
     }
 }

@@ -21,10 +21,12 @@ public class App {
 //        Unidade201.ExibirSituacao();
 //        System.out.print("\n\n");
 
-    Condominio VentoAzul = new Condominio("Vento Azul", 3000);
+    Condominio VentoAzul = new Condominio("Vento Azul", 0);
 
-    VentoAzul.PagarDespesa(20000);
-    VentoAzul.ReceberPagamento(300);
+    double valor = Unidade101.CalcularTaxa();
+    VentoAzul.ReceberPagamento(valor);
+    System.out.print("Condomínio " + VentoAzul.getNome() + "\nValor Pago: " + valor + "\nSaldo do Condomínio: " + VentoAzul.getSaldoCaixa());
+
     }
 }
 

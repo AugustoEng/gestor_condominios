@@ -27,8 +27,13 @@ public class App {
 //    VentoAzul.ReceberPagamento(valor);
 //    System.out.print("Condomínio " + VentoAzul.getNome() + "\nValor Pago: " + valor + "\nSaldo do Condomínio: " + VentoAzul.getSaldoCaixa());
 
-        double total = Unidade101.CalcularTaxa(10);
-        System.out.printf("Taxa com multa %.2f%n", total);
+//        double total = Unidade101.CalcularTaxa(10);
+//        System.out.printf("Taxa com multa %.2f%n", total);
+
+        Cobertura Miami = new Cobertura(301, 200, true);
+
+        Miami.getAll();
+
     }
 }
 

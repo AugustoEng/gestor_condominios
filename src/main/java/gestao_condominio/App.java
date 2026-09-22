@@ -6,26 +6,20 @@ public class App {
         Unidade Unidade102 = new Unidade(102,20, true);
         Unidade Unidade201 = new Unidade(201, 200, false);
 
-        System.out.print("unidade " + Unidade101.numero + "\nTaxa Base: " + Unidade101.taxaBase + "\n");
-        if(Unidade101.ocupado)  {
-            System.out.println("Ocupado\n\n");
-        } else  {
-            System.out.println("Livre\n\n");
-        }
+        System.out.print("Unidade 101\n");
+        Unidade101.CalcularTaxa();
+        Unidade101.ExibirSituacao();
+        System.out.print("\n\n");
 
-        System.out.print("unidade " + Unidade102.numero + "\nTaxa Base: " + Unidade102.taxaBase + "\n");
-        if(Unidade102.ocupado)  {
-            System.out.println("Ocupado\n\n");
-        } else  {
-            System.out.println("Livre\n\n");
-        }
+        System.out.print("Unidade 102\n");
+        Unidade102.CalcularTaxa();
+        Unidade102.ExibirSituacao();
+        System.out.print("\n\n");
 
-        System.out.print("unidade " + Unidade201.numero + "\nTaxa Base: " + Unidade201.taxaBase + "\n");
-        if(Unidade201.ocupado)  {
-            System.out.println("Ocupado\n\n");
-        } else  {
-            System.out.println("Livre\n\n");
-        }
+        System.out.print("Unidade 201\n");
+        Unidade201.CalcularTaxa();
+        Unidade201.ExibirSituacao();
+        System.out.print("\n\n");
     }
 }
 

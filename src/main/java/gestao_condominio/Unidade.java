@@ -15,6 +15,10 @@ public class Unidade {
         this.ocupado = ocupado;
     }
 
+    public Unidade(int numero, double taxaBase) {
+        this(numero, taxaBase, true);
+    }
+
     public int getNumero()  {
         return numero;
     }

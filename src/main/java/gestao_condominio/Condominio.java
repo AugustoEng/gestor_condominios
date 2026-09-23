@@ -36,8 +36,13 @@ public class Condominio {
     }
 
     public void PagarDespesa(double valor)  {
-        if(valor > this.saldoCaixa) {
+        if(valor < 0)   {
+            System.out.print("\nValor negativo não aceito\n");
+        }
+        else if(valor > this.saldoCaixa) {
             System.out.print("\nSaldo Insuficiente\n");
+        } else {
+            this.saldoCaixa -= valor;
         }
 
     }

@@ -1,8 +1,8 @@
 package gestao_condominio;
 
 public class Cobertura extends Unidade{
-    public Cobertura(int numero, double taxaBase, boolean ocupado) {
-        super(numero, taxaBase, ocupado);
+    public Cobertura(int numero, double taxaBase) {
+        super(numero, taxaBase);
     }
 
     @Override
@@ -12,6 +12,6 @@ public class Cobertura extends Unidade{
 
     @Override
     public String toString()    {
-        return String.format("Numero: %d | Taxa: %.2f | Ocupado: %B", getNumero(), CalcularTaxa(), getOcupado());
+        return String.format("Numero: %d | Taxa: %.2f | Ocupado: %s", getNumero(), CalcularTaxa(), getOcupado() ? "Sim" : "Não");
     }
 }

@@ -17,7 +17,7 @@ public class Unidade {
 
     @Override
     public String toString()    {
-        return String.format("Numero: %d | Taxa: %.2f | Ocupado: %B", numero, taxaBase, ocupado);
+        return String.format("Numero: %d | Taxa: %.2f | Ocupado: %s", numero, taxaBase, ocupado ? "Sim" : "Não");
     }
 
     public Unidade(int numero, double taxaBase) {

@@ -21,7 +21,7 @@ public class App {
 //        Unidade201.ExibirSituacao();
 //        System.out.print("\n\n");
 
-    Condominio VentoAzul = new Condominio("Vento Azul", 0);
+        Condominio VentoAzul = new Condominio("Vento Azul", 0);
 
 //    double valor = Unidade101.CalcularTaxa();
 //    VentoAzul.ReceberPagamento(valor);
@@ -34,7 +34,6 @@ public class App {
 
         double taxa = Miami.CalcularTaxa();
         System.out.printf("\nTaxa: %.2f%n\n", taxa);
-
     }
 }
 

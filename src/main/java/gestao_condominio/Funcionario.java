@@ -16,4 +16,9 @@ public class Funcionario {
     public double calcularSalario() {
         return this.salarioBase;
     }
+
+    @Override
+    public String toString()    {
+        return String.format("Nome: %s | Salário: %.2f", nome, salarioBase);
+    }
 }

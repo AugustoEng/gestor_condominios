@@ -10,4 +10,9 @@ public class Morador {
         this.cpf = cpf;
         this.numeroUnidade = numeroUnidade;
     }
+
+    @Override
+    public String toString()    {
+        return String.format("Nome: %s | CPF: %s", nome, cpf);
+    }
 }

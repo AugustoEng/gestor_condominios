@@ -15,6 +15,11 @@ public class Unidade {
         this.ocupado = ocupado;
     }
 
+    @Override
+    public String toString()    {
+        return String.format("Numero: %d | Taxa: %.2f | Ocupado: %B", numero, taxaBase, ocupado);
+    }
+
     public Unidade(int numero, double taxaBase) {
         this(numero, taxaBase, true);
     }

@@ -10,4 +10,9 @@ public class Zelador extends Funcionario{
     public double calcularSalario() {
         return calcularSalario() * 1.1;
     }
+
+    @Override
+    public String toString()    {
+        return String.format("Nome: %s | Salário: %.2f", getNome(), calcularSalario());
+    }
 }

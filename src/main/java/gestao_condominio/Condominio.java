@@ -13,6 +13,11 @@ public class Condominio {
         }
     }
 
+    @Override
+    public String toString()    {
+        return String.format("Nome: %s | Saldo: %.2f", nome, saldoCaixa);
+    }
+
     public String getNome() {
         return nome;
     }
